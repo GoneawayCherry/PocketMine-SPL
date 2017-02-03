@@ -17,7 +17,7 @@
 
 interface ClassLoader{
 
-	public function __construct($parent = null);
+	public function __construct();
 
 	/**
 	 * Adds a path to the lookup list
@@ -40,13 +40,6 @@ interface ClassLoader{
 	 * @return string[]
 	 */
 	public function getClasses();
-
-	/**
-	 * Returns the parent ClassLoader, if any
-	 *
-	 * @return ClassLoader
-	 */
-	public function getParent();
 
 	/**
 	 * Attaches the ClassLoader to the PHP runtime
